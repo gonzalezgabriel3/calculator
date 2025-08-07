@@ -290,9 +290,12 @@ btnClear.addEventListener("click", ()=>{
 
 const equal = document.querySelector("#equal");
 equal.addEventListener("click", ()=>{
+   
     if (operator == "/" && +secondNumber==0){
         displayError();
         
+    }else if (firstNumber=="" || secondNumber==""){
+        displayText(total);
     } else {
         total = operate(+firstNumber, +secondNumber, operator); 
     displayText(total);   
@@ -301,6 +304,7 @@ equal.addEventListener("click", ()=>{
     operator = "";
     firstNumber = total;
     secondNumber = "";
-    return console.log(total);
+    
+    return console.log(`TOTAL: ${total} \nFIRST NUMBER: ${firstNumber} \nSECOND NUMBER: ${secondNumber} \nOPERATOR: ${operator}`);
     
 }); 
