@@ -264,7 +264,7 @@ btnDivide.addEventListener("click", ()=>{
     operator = "/";
     console.log(operator);
 }
-if (operator == "/" && +secondNumber==0){
+if (operator == "/" && +secondNumber==='0'){
         displayError();
         
     } else {
